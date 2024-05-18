@@ -16,11 +16,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else {
             return
         }
+        
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
 
         self.window = UIWindow(windowScene: windowScene)
 
-        let navigationController = UINavigationController(rootViewController: LoginViewController())
-
+        let navigationController = UINavigationController(rootViewController: LoginViewController(viewModel: LoginViewModel()))
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }

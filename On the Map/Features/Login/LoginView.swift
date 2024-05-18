@@ -64,7 +64,7 @@ class LoginView: UIView {
     
     init() {
         super.init(frame: .zero)
-        backgroundColor = UIColor(red: 0.01, green: 0.70, blue: 0.90, alpha: 1.00)
+        backgroundColor = .udacityColor
         setupConstraints()
     }
 

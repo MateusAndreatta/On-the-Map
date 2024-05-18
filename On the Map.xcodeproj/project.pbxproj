@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39D94EEA2BEFDC2F00F4B3F1 /* RequestTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94EE92BEFDC2F00F4B3F1 /* RequestTokenResponse.swift */; };
+		39D94EED2BEFE44200F4B3F1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94EEC2BEFE44200F4B3F1 /* MapViewController.swift */; };
+		39D94EEF2BEFE47300F4B3F1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94EEE2BEFE47300F4B3F1 /* MapView.swift */; };
+		39D94EF12BEFECBA00F4B3F1 /* StudentLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94EF02BEFECBA00F4B3F1 /* StudentLocationResponse.swift */; };
+		39D94EF42BEFF1E700F4B3F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94EF32BEFF1E700F4B3F1 /* HomeViewController.swift */; };
+		39D94EF72BEFF28600F4B3F1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94EF62BEFF28600F4B3F1 /* ListViewController.swift */; };
+		39D94EF92BEFFF9000F4B3F1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94EF82BEFFF9000F4B3F1 /* HomeViewModel.swift */; };
+		39D94EFB2BF0007700F4B3F1 /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94EFA2BF0007700F4B3F1 /* StudentLocation.swift */; };
+		39D94EFD2BF004A200F4B3F1 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94EFC2BF004A200F4B3F1 /* ListView.swift */; };
+		39D94F002BF007C900F4B3F1 /* PostLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94EFF2BF007C900F4B3F1 /* PostLocationViewController.swift */; };
+		39D94F022BF007D400F4B3F1 /* PostLocationInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94F012BF007D400F4B3F1 /* PostLocationInformationView.swift */; };
+		39D94F042BF007DD00F4B3F1 /* PostLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94F032BF007DD00F4B3F1 /* PostLocationViewModel.swift */; };
+		39D94F062BF0385800F4B3F1 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94F052BF0385800F4B3F1 /* UIColorExtensions.swift */; };
+		39D94F082BF0405900F4B3F1 /* PostLocationSubmitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94F072BF0405800F4B3F1 /* PostLocationSubmitView.swift */; };
+		39D94F0A2BF2D46800F4B3F1 /* PostStudentLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94F092BF2D46700F4B3F1 /* PostStudentLocationResponse.swift */; };
+		39D94F0C2BF2D49400F4B3F1 /* PostStudentLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94F0B2BF2D49400F4B3F1 /* PostStudentLocationRequest.swift */; };
+		39D94F0E2BF4388600F4B3F1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D94F0D2BF4388600F4B3F1 /* StringExtension.swift */; };
 		39F92C582BDC5E7D00C92B09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F92C572BDC5E7D00C92B09 /* AppDelegate.swift */; };
 		39F92C5A2BDC5E7D00C92B09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F92C592BDC5E7D00C92B09 /* SceneDelegate.swift */; };
 		39F92C5C2BDC5E7D00C92B09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F92C5B2BDC5E7D00C92B09 /* LoginViewController.swift */; };
@@ -16,9 +33,29 @@
 		39F92C6F2BDC65BC00C92B09 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F92C6E2BDC65BC00C92B09 /* LoginView.swift */; };
 		39F92C722BDC678500C92B09 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F92C712BDC678500C92B09 /* UIViewExtensions.swift */; };
 		39F92C742BDC71B900C92B09 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F92C732BDC71B900C92B09 /* UIViewControllerExtensions.swift */; };
+		39F92C792BDC869200C92B09 /* UdacityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F92C782BDC869200C92B09 /* UdacityAPI.swift */; };
+		39F92C7C2BDC98B400C92B09 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F92C7B2BDC98B400C92B09 /* LoginRequest.swift */; };
+		39F933092BF8191B00AE39BF /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F933082BF8191B00AE39BF /* ErrorResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39D94EE92BEFDC2F00F4B3F1 /* RequestTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenResponse.swift; sourceTree = "<group>"; };
+		39D94EEC2BEFE44200F4B3F1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		39D94EEE2BEFE47300F4B3F1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		39D94EF02BEFECBA00F4B3F1 /* StudentLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationResponse.swift; sourceTree = "<group>"; };
+		39D94EF32BEFF1E700F4B3F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		39D94EF62BEFF28600F4B3F1 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		39D94EF82BEFFF9000F4B3F1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		39D94EFA2BF0007700F4B3F1 /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
+		39D94EFC2BF004A200F4B3F1 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		39D94EFF2BF007C900F4B3F1 /* PostLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocationViewController.swift; sourceTree = "<group>"; };
+		39D94F012BF007D400F4B3F1 /* PostLocationInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocationInformationView.swift; sourceTree = "<group>"; };
+		39D94F032BF007DD00F4B3F1 /* PostLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocationViewModel.swift; sourceTree = "<group>"; };
+		39D94F052BF0385800F4B3F1 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		39D94F072BF0405800F4B3F1 /* PostLocationSubmitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocationSubmitView.swift; sourceTree = "<group>"; };
+		39D94F092BF2D46700F4B3F1 /* PostStudentLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStudentLocationResponse.swift; sourceTree = "<group>"; };
+		39D94F0B2BF2D49400F4B3F1 /* PostStudentLocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStudentLocationRequest.swift; sourceTree = "<group>"; };
+		39D94F0D2BF4388600F4B3F1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		39F92C542BDC5E7D00C92B09 /* On the Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On the Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F92C572BDC5E7D00C92B09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39F92C592BDC5E7D00C92B09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +67,9 @@
 		39F92C6E2BDC65BC00C92B09 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		39F92C712BDC678500C92B09 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		39F92C732BDC71B900C92B09 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		39F92C782BDC869200C92B09 /* UdacityAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityAPI.swift; sourceTree = "<group>"; };
+		39F92C7B2BDC98B400C92B09 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		39F933082BF8191B00AE39BF /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +83,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39D94EE82BEFDC2400F4B3F1 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				39D94EE92BEFDC2F00F4B3F1 /* RequestTokenResponse.swift */,
+				39D94EF02BEFECBA00F4B3F1 /* StudentLocationResponse.swift */,
+				39D94EFA2BF0007700F4B3F1 /* StudentLocation.swift */,
+				39D94F092BF2D46700F4B3F1 /* PostStudentLocationResponse.swift */,
+				39F933082BF8191B00AE39BF /* ErrorResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		39D94EEB2BEFE40800F4B3F1 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				39D94EEC2BEFE44200F4B3F1 /* MapViewController.swift */,
+				39D94EEE2BEFE47300F4B3F1 /* MapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		39D94EF22BEFF1C900F4B3F1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				39D94EF32BEFF1E700F4B3F1 /* HomeViewController.swift */,
+				39D94EF82BEFFF9000F4B3F1 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		39D94EF52BEFF24000F4B3F1 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				39D94EF62BEFF28600F4B3F1 /* ListViewController.swift */,
+				39D94EFC2BF004A200F4B3F1 /* ListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		39D94EFE2BF007AA00F4B3F1 /* PostLocation */ = {
+			isa = PBXGroup;
+			children = (
+				39D94EFF2BF007C900F4B3F1 /* PostLocationViewController.swift */,
+				39D94F012BF007D400F4B3F1 /* PostLocationInformationView.swift */,
+				39D94F032BF007DD00F4B3F1 /* PostLocationViewModel.swift */,
+				39D94F072BF0405800F4B3F1 /* PostLocationSubmitView.swift */,
+			);
+			path = PostLocation;
+			sourceTree = "<group>";
+		};
 		39F92C4B2BDC5E7D00C92B09 = {
 			isa = PBXGroup;
 			children = (
@@ -62,8 +152,9 @@
 		39F92C562BDC5E7D00C92B09 /* On the Map */ = {
 			isa = PBXGroup;
 			children = (
+				39F92C772BDC867C00C92B09 /* Features */,
+				39F92C752BDC77EC00C92B09 /* Services */,
 				39F92C702BDC676F00C92B09 /* Extensions */,
-				39F92C6B2BDC658900C92B09 /* Login */,
 				39F92C572BDC5E7D00C92B09 /* AppDelegate.swift */,
 				39F92C592BDC5E7D00C92B09 /* SceneDelegate.swift */,
 				39F92C602BDC5E8100C92B09 /* Assets.xcassets */,
@@ -88,8 +179,49 @@
 			children = (
 				39F92C712BDC678500C92B09 /* UIViewExtensions.swift */,
 				39F92C732BDC71B900C92B09 /* UIViewControllerExtensions.swift */,
+				39D94F052BF0385800F4B3F1 /* UIColorExtensions.swift */,
+				39D94F0D2BF4388600F4B3F1 /* StringExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		39F92C752BDC77EC00C92B09 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				39F92C762BDC866D00C92B09 /* Model */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		39F92C762BDC866D00C92B09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39D94EE82BEFDC2400F4B3F1 /* Responses */,
+				39F92C7A2BDC989F00C92B09 /* Requests */,
+				39F92C782BDC869200C92B09 /* UdacityAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39F92C772BDC867C00C92B09 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				39D94EFE2BF007AA00F4B3F1 /* PostLocation */,
+				39D94EF52BEFF24000F4B3F1 /* List */,
+				39D94EF22BEFF1C900F4B3F1 /* Home */,
+				39D94EEB2BEFE40800F4B3F1 /* Map */,
+				39F92C6B2BDC658900C92B09 /* Login */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		39F92C7A2BDC989F00C92B09 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				39F92C7B2BDC98B400C92B09 /* LoginRequest.swift */,
+				39D94F0B2BF2D49400F4B3F1 /* PostStudentLocationRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,13 +294,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D94EF12BEFECBA00F4B3F1 /* StudentLocationResponse.swift in Sources */,
+				39D94EED2BEFE44200F4B3F1 /* MapViewController.swift in Sources */,
+				39D94EEF2BEFE47300F4B3F1 /* MapView.swift in Sources */,
+				39D94EF92BEFFF9000F4B3F1 /* HomeViewModel.swift in Sources */,
+				39F92C7C2BDC98B400C92B09 /* LoginRequest.swift in Sources */,
+				39D94EF42BEFF1E700F4B3F1 /* HomeViewController.swift in Sources */,
+				39F92C792BDC869200C92B09 /* UdacityAPI.swift in Sources */,
+				39D94F082BF0405900F4B3F1 /* PostLocationSubmitView.swift in Sources */,
+				39D94EFB2BF0007700F4B3F1 /* StudentLocation.swift in Sources */,
+				39D94EFD2BF004A200F4B3F1 /* ListView.swift in Sources */,
 				39F92C6D2BDC659D00C92B09 /* LoginViewModel.swift in Sources */,
 				39F92C5C2BDC5E7D00C92B09 /* LoginViewController.swift in Sources */,
+				39D94F022BF007D400F4B3F1 /* PostLocationInformationView.swift in Sources */,
+				39D94EF72BEFF28600F4B3F1 /* ListViewController.swift in Sources */,
+				39D94EEA2BEFDC2F00F4B3F1 /* RequestTokenResponse.swift in Sources */,
+				39D94F0C2BF2D49400F4B3F1 /* PostStudentLocationRequest.swift in Sources */,
 				39F92C582BDC5E7D00C92B09 /* AppDelegate.swift in Sources */,
 				39F92C6F2BDC65BC00C92B09 /* LoginView.swift in Sources */,
+				39D94F042BF007DD00F4B3F1 /* PostLocationViewModel.swift in Sources */,
+				39D94F062BF0385800F4B3F1 /* UIColorExtensions.swift in Sources */,
+				39D94F0A2BF2D46800F4B3F1 /* PostStudentLocationResponse.swift in Sources */,
 				39F92C722BDC678500C92B09 /* UIViewExtensions.swift in Sources */,
 				39F92C5A2BDC5E7D00C92B09 /* SceneDelegate.swift in Sources */,
 				39F92C742BDC71B900C92B09 /* UIViewControllerExtensions.swift in Sources */,
+				39F933092BF8191B00AE39BF /* ErrorResponse.swift in Sources */,
+				39D94F0E2BF4388600F4B3F1 /* StringExtension.swift in Sources */,
+				39D94F002BF007C900F4B3F1 /* PostLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
