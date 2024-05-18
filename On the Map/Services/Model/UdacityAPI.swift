@@ -10,12 +10,14 @@ import Foundation
 class UdacityAPI {
     
     static let baseEndpoint = "https://onthemap-api.udacity.com/v1"
+    static private(set) var userData: UserDataResponse? = nil
     
     enum Endpoints {
         case login
         case logout
         case postLocation
         case getLocation
+        case getUserData(String)
         
         var path: String {
            switch self {
@@ -25,6 +27,8 @@ class UdacityAPI {
                return "/StudentLocation"
            case .getLocation:
                return "/StudentLocation?order=-updatedAt&limit=100"
+           case .getUserData(let userId):
+               return "/users/\(userId)"
            }
        }
        
@@ -61,7 +65,8 @@ class UdacityAPI {
               let responseObject = try? decoder.decode(RequestTokenResponse.self, from: newData)
               let responseError = try? decoder.decode(ErrorResponse.self, from: newData)
 
-              if let _ = responseObject {
+              if let responseObject = responseObject {
+                  getUserData(userId: responseObject.account.key)
                   DispatchQueue.main.async {
                       completion(true, nil)
                   }
@@ -135,4 +140,19 @@ class UdacityAPI {
         task.resume()
     }
     
+    static func getUserData(userId: String) {
+        let request = URLRequest(url: Endpoints.getUserData(userId).url)
+        let session = URLSession.shared
+        let task = session.dataTask(with: request) { data, response, error in
+            if error != nil {
+                return
+            }
+            guard let data else { return }
+            let range = 5..<data.count
+            let newData = data.subdata(in: range)
+            let decoder = JSONDecoder()
+            userData = try? decoder.decode(UserDataResponse.self, from: newData)
+        }
+        task.resume()
+    }
 }
