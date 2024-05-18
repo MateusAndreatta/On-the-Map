@@ -11,6 +11,7 @@ import MapKit
 
 protocol PostLocationSubmitViewDelegate: AnyObject {
     func submit(link: String?, coordinate: CLLocationCoordinate2D?, search: String?)
+    func geocodeDidFinish(success: Bool)
 }
 
 class PostLocationSubmitView: UIView {
@@ -32,6 +33,7 @@ class PostLocationSubmitView: UIView {
         textField.backgroundColor = .udacityColor
         textField.textAlignment = .center
         textField.textColor = .white
+        textField.delegate = self
         return textField
     }()
     
@@ -100,6 +102,7 @@ class PostLocationSubmitView: UIView {
         let search = MKLocalSearch(request: searchRequest)
         search.start { [weak self] response, error in
             guard let response = response else {
+                self?.delegate?.geocodeDidFinish(success: false)
                 return
             }
             if let responseCoordinate = response.mapItems.first?.placemark.location?.coordinate {
@@ -108,7 +111,12 @@ class PostLocationSubmitView: UIView {
                 annotation.coordinate = responseCoordinate
                 self?.mkMapView.addAnnotation(annotation)
                 self?.mkMapView.setCenter(responseCoordinate, animated: false)
+                let zoomRange = MKMapView.CameraZoomRange(minCenterCoordinateDistance: 1000, maxCenterCoordinateDistance: 100000)
+                self?.mkMapView.setCameraZoomRange(zoomRange, animated: true)
+                self?.delegate?.geocodeDidFinish(success: true)
+                return
             }
+            self?.delegate?.geocodeDidFinish(success: false)
         }
     }
     
@@ -130,5 +138,12 @@ extension PostLocationSubmitView: MKMapViewDelegate {
         annotationView.markerTintColor = .red
         annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         return annotationView
+    }
+}
+
+extension PostLocationSubmitView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

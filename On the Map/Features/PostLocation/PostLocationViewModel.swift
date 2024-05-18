@@ -9,7 +9,6 @@ import Foundation
 
 class PostLocationViewModel {
     
-    
     func submitStudentLocationData(link: String, search: String, latitude: Double, longitude: Double, completion: @escaping (Bool?, Error?) -> Void) {
         let request = PostStudentLocationRequest(uniqueKey: UUID().uuidString,
                                                  firstName: .randomName(),

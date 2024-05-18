@@ -12,8 +12,16 @@ import MapKit
 class PostLocationViewController: UIViewController {
     private let viewModel: PostLocationViewModel
     
-    private lazy var containerView: UIStackView = {
-        return UIStackView(arrangedSubviews: [postLocationInformationView, postLocationSubmitView])
+    private lazy var containerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private lazy var contentStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [postLocationInformationView, postLocationSubmitView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
     }()
     
     private lazy var postLocationInformationView: PostLocationInformationView = {
@@ -29,12 +37,19 @@ class PostLocationViewController: UIViewController {
         return postLocationSubmitView
     }()
     
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.isHidden = true
+        return indicator
+    }()
+    
     init(viewModel: PostLocationViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        view = containerView
         title = "Add Location"
         setupNavigationBar()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -50,6 +65,18 @@ class PostLocationViewController: UIViewController {
         navigationItem.rightBarButtonItem = cancelItem
     }
     
+    private func setupConstraints() {
+        view.addSubview(containerView)
+        containerView.addSubview(contentStackView)
+        containerView.addSubview(activityIndicator)
+        containerView.setupToSuperview()
+        contentStackView.setupToSuperview()
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+    
     private func showSubmitView() {
         postLocationInformationView.isHidden = true
         postLocationSubmitView.isHidden = false
@@ -58,6 +85,16 @@ class PostLocationViewController: UIViewController {
     @objc
     private func cancelDidTap() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    private func showSpinner() {
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
+    }
+
+    private func hideSpinner() {
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = true
     }
 }
 
@@ -69,13 +106,20 @@ extension PostLocationViewController: PostLocationInformationViewDelegate {
             return
         }
         postLocationSubmitView.searchLocation(for: location)
+        showSpinner()
         showSubmitView()
     }
     
 }
 
-
 extension PostLocationViewController: PostLocationSubmitViewDelegate {
+    
+    func geocodeDidFinish(success: Bool) {
+        if !success {
+            showAlert(title: "Error", message: "Unable to get your geocoding information, please try again.")
+        }
+        hideSpinner()
+    }
     
     func submit(link: String?, coordinate: CLLocationCoordinate2D?, search: String?) {
         guard let link, !link.isEmpty else {

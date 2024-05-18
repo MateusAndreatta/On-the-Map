@@ -35,6 +35,7 @@ class LoginView: UIView {
         textField.placeholder = "Username"
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.delegate = self
         return textField
     }()
     
@@ -44,6 +45,7 @@ class LoginView: UIView {
         textField.isSecureTextEntry = true
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.delegate = self
         return textField
     }()
     
@@ -96,4 +98,11 @@ class LoginView: UIView {
         delegate?.didTapButton(email: usernameTextField.text, password: passwordTextField.text)
      }
     
+}
+
+extension LoginView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

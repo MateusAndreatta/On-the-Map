@@ -52,6 +52,7 @@ class PostLocationInformationView: UIView {
         textField.backgroundColor = .udacityColor
         textField.textAlignment = .center
         textField.textColor = .white
+        textField.delegate = self
         return textField
     }()
     
@@ -103,3 +104,11 @@ class PostLocationInformationView: UIView {
         delegate?.searchFor(location: textField.text)
     }
 }
+
+extension PostLocationInformationView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+

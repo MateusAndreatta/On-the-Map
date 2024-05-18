@@ -44,8 +44,8 @@ class HomeViewController: UITabBarController {
         let logoutItem = UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), style: .plain, target: self, action: #selector(logoutItemDidTap))
         let pinItem = UIBarButtonItem(image: UIImage(systemName: "mappin.and.ellipse"), style: .plain, target: self, action: #selector(pinItemDidTap))
 
-        navigationItem.rightBarButtonItems = [logoutItem, refreshItem]
-        navigationItem.leftBarButtonItem = pinItem
+        navigationItem.rightBarButtonItems = [pinItem, refreshItem]
+        navigationItem.leftBarButtonItem = logoutItem
     }
     
     private func setupTabBar() {

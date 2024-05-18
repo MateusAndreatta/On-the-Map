@@ -24,7 +24,7 @@ class UdacityAPI {
            case .postLocation:
                return "/StudentLocation"
            case .getLocation:
-               return "/StudentLocation?order=-updatedAt"
+               return "/StudentLocation?order=-updatedAt&limit=100"
            }
        }
        
